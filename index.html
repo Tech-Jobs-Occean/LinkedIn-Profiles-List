@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جراس - موقع SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: #0E1117; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: right; /* Default text alignment for RTL */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #2a2f36;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .logo .highlight {
+            color: #4ade80; /* Greenish highlight for logo part if needed */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 30px; /* RTL: changed from margin-left */
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #a0aec0; /* Lighter gray for nav links */
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #ffffff;
+        }
+
+        .login-btn {
+            background-image: linear-gradient(to left, #4AC9BA, #0E8D85); /* RTL: Gradient to left */
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: opacity 0.3s ease; /* Changed transition to opacity for gradient */
+        }
+
+        .login-btn:hover {
+            opacity: 0.9; /* Adjust hover effect for gradient */
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+            flex-grow: 1;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-left: 40px; /* RTL: changed from padding-right */
+            padding-right: 0;
+        }
+
+        .hero-tag {
+            color: #718096; /* Medium gray for tag */
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .algerian-flag {
+            width: 20px;
+            height: 14px;
+            display: inline-block;
+        }
+
+        .hero-title {
+            font-size: 48px; /* Large title */
+            font-weight: bold;
+            color: #ffffff;
+            line-height: 1.3; /* Adjusted for Arabic fonts */
+            margin-bottom: 20px;
+        }
+
+        .hero-title .highlight-text {
+            color: #4fd1c5; /* Teal color for "High-Converting" */
+        }
+
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #a0aec0; /* Lighter gray for subtitle */
+            line-height: 1.7; /* Adjusted for Arabic fonts */
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-buttons .btn {
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 15px; /* RTL: changed from margin-right */
+            margin-right: 0;
+            transition: opacity 0.3s ease;
+            display: inline-block; /* Ensures proper spacing with text */
+        }
+         .hero-buttons .btn:last-child {
+            margin-left: 0;
+        }
+
+
+        .btn-primary {
+            background-color: #4fd1c5; /* Teal button */
+            color: #1a202c; /* Dark text on teal button */
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background-color: #2d3748; /* Dark gray button */
+            color: #ffffff;
+            border: 1px solid #4a5568;
+        }
+        .btn-secondary:hover {
+            background-color: #4a5568;
+        }
+
+        .hero-client-logos {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px; 
+            align-items: center;
+        }
+
+        .hero-client-logo-item img {
+            width: auto; 
+            opacity: 0.7; 
+        }
+
+        .social-proof {
+            margin-top: 20px; 
+            display: flex;
+            align-items: center;
+            color: #a0aec0;
+            font-size: 14px;
+            flex-wrap: wrap; 
+        }
+
+        .avatars {
+            display: flex;
+            margin-left: 10px; /* RTL: changed from margin-right */
+            margin-right: 0;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #4a5568; 
+            border: 2px solid #0E1117; 
+            margin-right: -10px; /* RTL: changed from margin-left for overlap */
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: #0E1117; 
+            font-weight: bold;
+        }
+        .avatar:first-child {
+            margin-right: 0; /* RTL: changed from margin-left */
+        }
+
+        .star-rating {
+            display: flex;
+            align-items: center;
+            margin-left: 10px; /* RTL: changed from margin-right */
+            margin-right: 0;
+            color: #facc15; 
+        }
+
+        .star {
+            font-size: 18px; 
+            margin-left: 2px; /* RTL: changed from margin-right */
+            margin-right: 0;
+        }
+        
+        .social-proof-text {
+           /* No specific styles needed if it just flows after stars */
+        }
+
+
+        .hero-image-placeholder {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            color: #718096;
+        }
+        
+        .hero-image-placeholder img {
+            display: block; /* Removes extra space below the image */
+            width: 80%;    /* Relative to the .hero-image-placeholder container */
+            height: auto;   /* Maintains the image's aspect ratio */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center; /* Ensures content within hero is centered */
+            }
+            .hero-content {
+                padding-left: 0; /* RTL: No padding on left */
+                padding-right: 0; /* No padding on right */
+                margin-bottom: 40px;
+                text-align: center; /* Center text content */
+            }
+            .hero-buttons {
+                justify-content: center;
+                display: flex;
+            }
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .social-proof {
+                justify-content: center;
+                margin-top: 20px; 
+            }
+            .hero-client-logos { 
+                justify-content: center;
+                gap: 15px 25px; 
+                margin-top: 25px;
+            }
+            .hero-image-placeholder {
+                width: 100%;
+                max-width: 400px; 
+                margin: 0 auto;
+            }
+            nav ul {
+                display: none; 
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px; /* Adjusted for Arabic */
+            }
+            .hero-subtitle {
+                font-size: 15px; /* Adjusted for Arabic */
+            }
+            .hero-tag {
+                justify-content: center;
+            }
+            .hero-buttons { 
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-buttons .btn {
+                padding: 12px 24px;
+                font-size: 14px;
+                margin-left: 0; /* RTL: Remove left margin */
+                margin-right: 0; /* Remove right margin */
+                margin-bottom: 10px; 
+                width: 80%; 
+                max-width: 250px; 
+            }
+            .hero-buttons .btn:last-child {
+                margin-bottom: 0; 
+            }
+            
+            .hero-buttons p {
+                text-align: center !important;
+            }
+            
+            .hero-client-logo-item img { 
+                max-height: 20px;
+            }
+            .social-proof {
+                font-size: 12px; /* Adjusted for Arabic */
+                margin-top: 20px; 
+                gap: 10px; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main class="container hero">
+        <div class="hero-content">
+            <p class="hero-tag">
+                لكل مبرمج جزائري 
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <path d="M19,4h12V28h-12c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" transform="rotate(180 23 16)" fill="#fff">
+                    </path>
+                    <path d="M5,4h11V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" fill="#2b6536"></path>
+                    <path
+                        d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z"
+                        opacity=".15"></path>
+                    <path fill="#c22b38"
+                        d="M19.091 17.427L20.769 19.737 20.769 16.882 23.483 16 20.769 15.118 20.769 12.263 19.091 14.573 16.376 13.691 18.054 16 16.376 18.309 19.091 17.427z">
+                    </path>
+                    <path
+                        d="M14.345,20.907c-2.71-2.17-3.148-6.126-.978-8.836,2.17-2.71,6.126-3.148,8.836-.978,.361,.289,.689,.617,.978,.978-2.17-3.758-6.976-5.046-10.734-2.876-3.758,2.17-5.046,6.976-2.876,10.734,2.17,3.758,6.976,5.046,10.734,2.876,1.195-.69,2.187-1.682,2.876-2.876-2.17,2.71-6.126,3.148-8.836,.978Z"
+                        fill="#c22b38"></path>
+                    <path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z"
+                        fill="#fff" opacity=".2"></path>
+                </svg>
+            </p>
+            <h1 class="hero-title">
+
+                وظائف المبرمجين في الجزائر موجودة  <br>
+
+                <span class="highlight-text">
+                    فقط تحتاج أن تبحث في المكان الصحيح
+                         </span>
+            </h1>
+            <p class="hero-subtitle">
+                قائمة حصرية لأكثر من 200 بروفايل لنكدإن تم جمعهم يدويًا لشركات جزائرية تقنية + صناع القرار فيها. <br>
+                هؤلاء ينشرون بانتظام فرص عمل للمبرمجين، تابعهم وابقَ على اطلاع دائم، ما تفوّت حتى فرصة عمل في الجزائر!
+
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">أحصل على القائمة الآن</a>
+                <p style="margin-top: 10px; font-size: 14px; color: #718096; text-align: right;">القائمة تصلك فورا إلى إميلك</p>
+            </div>
+            <div class="hero-client-logos">
+                <div class="hero-client-logo-item">
+                    <img src="https://i.imgur.com/1fji4p9.png" alt="temtem One Logo">
+                </div>
+                <div class="hero-client-logo-item">
+                    <img src="https://i.imgur.com/g4YoTLE.png" alt="Ooredoo Logo">
+                </div>
+                <div class="hero-client-logo-item">
+                    <img src="https://i.imgur.com/rFoVF5G.png" alt="Yassir Logo">
+                </div>
+                <div class="hero-client-logo-item">
+                    <img src="https://i.imgur.com/e0Qhj7y.png" alt="Ouedkniss Logo">
+                </div>
+                <div class="hero-client-logo-item">
+                    <img src="https://i.imgur.com/nJfeOYh.png" alt="Chargily Logo">
+                </div> 
+            </div>
+            <div class="social-proof">
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <span class="social-proof-text">أكثر من 45 مطور جزائري تحصل على القائمة واستفاد منها فعليًا.</span>
+            </div>
+        </div>
+        <div class="hero-image-placeholder">
+            <img src="https://i.imgur.com/Wxs6qdW.jpeg" alt="" srcset="">
+        </div>
+    </main>
+
+</body>
+</html>
