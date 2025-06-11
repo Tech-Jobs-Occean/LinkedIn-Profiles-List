@@ -85,7 +85,9 @@
             display: flex;
             align-items: center;
             padding: 60px 0;
-            flex-grow: 1;
+            /* flex-grow: 1; */ /* Replaced by min-height for full screen effect */
+            min-height: 100vh; /* Make hero section take full viewport height */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
 
         .hero-content {
@@ -247,6 +249,45 @@
             height: auto;   /* Maintains the image's aspect ratio */
         }
 
+        /* Info Section */
+        .info-section {
+            padding: 60px 0;
+            border-top: 1px solid #2a2f36; /* Optional: to separate from hero */
+        }
+
+        .info-content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px; /* Space between text and image */
+        }
+
+        .info-text {
+            flex: 1;
+            font-size: 17px; /* Adjusted for Arabic */
+            line-height: 1.8; /* Adjusted for Arabic */
+            color: #a0aec0; /* Lighter gray for text */
+        }
+
+        .info-text p {
+            margin-bottom: 20px;
+        }
+        .info-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Optional: if you want rounded corners for the image */
+        }
+
 
         /* Responsive adjustments */
         @media (max-width: 992px) {
@@ -284,6 +325,13 @@
             }
             nav ul {
                 display: none; 
+            }
+            .info-content-wrapper {
+                flex-direction: column-reverse; /* Image above text on mobile */
+                text-align: center;
+            }
+            .info-text {
+                margin-top: 30px;
             }
         }
         @media (max-width: 768px) {
@@ -324,6 +372,9 @@
                 font-size: 12px; /* Adjusted for Arabic */
                 margin-top: 20px; 
                 gap: 10px; 
+            }
+            .info-text {
+                font-size: 15px; /* Adjusted for Arabic */
             }
         }
 
@@ -400,6 +451,23 @@
             <img src="https://i.imgur.com/Wxs6qdW.jpeg" alt="" srcset="">
         </div>
     </main>
+
+    <section class="container info-section">
+        <div class="info-content-wrapper">
+            <div class="info-text">
+                <p>
+                    كما نعلم جميعا، منصة لنكدإن هي أفضل مكان لإيجاد فرص العمل في الجزائر، لكن فقط إذا كان لديك شبكة علاقات كبيرة وقوية وهذا الشيئ يعتبر صعب ويأخذ وقت طويل (أشهر).
+                </p>
+                <p>
+                    قائمتنا الخاصة باللنكدإن بروفايلز تخليك تبني شبكة علاقات إحترافية في غضون دقائق ومع أناس قيّمة (صفحات شركات، أصحاب شركات، مديرين تقنيين...)، الشيئ اللي يخليك تتوصل لفرص عمل كثيرة كل يوم.
+                </p>
+            </div>
+            <div class="info-image">
+                <!-- You can use a placeholder or a specific image -->
+                <img src="https://via.placeholder.com/400x300/2d3748/e0e0e0?text=صورة+توضيحية" alt="صورة توضيحية للمنصة">
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
