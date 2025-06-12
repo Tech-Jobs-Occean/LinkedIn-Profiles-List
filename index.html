@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جراس - موقع SaaS</title>
+    <title>قائمة بروفايلات لينكدإن للشركات الجزائرية التقنية - فرص عمل للمبرمجين</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
@@ -971,10 +971,19 @@
             .final-cta-subtitle {
                 font-size: 15px;
             }
+
+            .final-cta-avatars {
+                gap: 15px; /* Adjust gap for smaller screens */
+            }
             
             .final-cta-avatar {
-                width: 35px;
-                height: 35px;
+                /* Removed fixed width and height to allow natural image sizing */
+                width: auto;
+                height: auto;
+            }
+
+            .final-cta-avatar img {
+                max-height: 24px; /* Adjust max-height for logos on small screens */
             }
             
             .final-cta-button {
@@ -982,6 +991,57 @@
                 font-size: 15px;
                 width: 90%;
                 max-width: 300px;
+            }
+        }
+
+        /* Footer Section */
+        .footer-section {
+            padding: 40px 0;
+            background-color: #0E1117;
+            border-top: 1px solid #2a2f36;
+            text-align: center;
+            color: #a0aec0;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px; /* Add some padding for smaller screens */
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+        }
+
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #4fd1c5;
+        }
+
+        .copyright-text {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .footer-links {
+                gap: 20px;
+            }
+            .footer-links a {
+                font-size: 14px;
+            }
+            .copyright-text {
+                font-size: 13px;
             }
         }
     </style>
@@ -1054,7 +1114,7 @@
             </div>
         </div>
         <div class="hero-image-placeholder">
-            <img src="https://i.imgur.com/Wxs6qdW.jpeg" alt="" srcset="">
+            <img src="https://i.imgur.com/i2zTKRy.png" alt="" srcset="">
         </div>
     </main>
 
@@ -1233,10 +1293,22 @@
                 </p>
                 
                 <a href="#" class="final-cta-button">احصل على القائمة الآن</a>
-                <p class="final-cta-note">القائمة تصلك فورًا إلى بريدك الإلكتروني</p>
+                <p class="final-cta-note">القائمة تصلك فورا إلى إميلك</p>
             </div>
         </div>
     </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://t.me/TechJobsOccean" target="_blank" rel="noopener noreferrer">قناة التلغرام</a>
+                    <a href="https://www.linkedin.com/company/tech-jobs-occean" target="_blank" rel="noopener noreferrer">صفحة لينكدإن</a>
+                </div>
+                <p class="copyright-text">&copy; 2025 جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function toggleFaq(button) {
