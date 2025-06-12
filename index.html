@@ -688,6 +688,132 @@
             .hero-image-placeholder img {
                 width: 95%;
             }
+            .info-text {
+                font-size: 16px; /* Increased from 15px for better readability */
+                line-height: 1.8;
+            }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: #161b22;
+            border-top: 1px solid #2a2f36;
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #2a2f36;
+            border-radius: 8px;
+            background-color: #0E1117;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: #ffffff;
+            text-align: right;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .faq-question:hover {
+            background-color: #1a1f26;
+        }
+
+        .faq-question.active {
+            background-color: #1a1f26;
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            color: #4fd1c5;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: #0E1117;
+        }
+
+        .faq-answer.active {
+            max-height: 200px;
+            padding: 20px;
+        }
+
+        .faq-answer p {
+            color: #a0aec0;
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 60px 0;
+            }
+            
+            .faq-title {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+            
+            .faq-question {
+                font-size: 16px;
+                padding: 16px;
+            }
+            
+            .faq-answer p {
+                font-size: 14px;
+            }
+            
+            .faq-answer.active {
+                padding: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faq-title {
+                font-size: 24px;
+            }
+            
+            .faq-question {
+                font-size: 15px;
+                padding: 14px;
+            }
+            
+            .faq-answer p {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -848,6 +974,82 @@
             </div>
         </div>
     </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">الأسئلة الشائعة</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ما هي هذه القائمة؟
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>هي عبارة عن ملف إكسل فيه أكثر من 200 بروفايل على لينكدإن، جمعتهم يديويًا واحد بواحد لتقريبا جميع الشركات الجزائرية التقنية ولصناع القرار فيها ( مؤسسين، مديرين تنفيذيين، مديرين تقنيين... ).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        كيف تفيدني هذه القائمة؟
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>أنت كمبرمج تبحث عن عمل، بعد الحصول على القائمة ومتابعة البروفايلز اللي فيها، تكون مطلع على تقريبا جميع فرص العمل للمبرمجين المنشورة على لنكدإن الشيئ الذي يساعدك في إيجاد عمل.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        أنا مبرمج جديد، هل هذه القائمة موجهة إلي كذلك؟
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، هذه الشركات توظف مبرمجين من جميع المستويات.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        أنا أبحث عن تدريب (ستاج)، هل هذه القائمة تفيدني؟
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، يمكنك مراسلة الشركات التي في القائمة وطلب تدريب عندهم، أو في بعض الأحيان هم من ينشرون فرص تدريب لديهم.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        هل القائمة فيها إشتراك؟
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>لا، عندما تتحصل على ملف الإكسل يبقى عندك مدى الحياة بدون أي إشتراك.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                button.classList.add('active');
+                answer.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
