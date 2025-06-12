@@ -815,6 +815,175 @@
                 font-size: 13px;
             }
         }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 80px 0;
+            background-color: #0E1117;
+            border-top: 1px solid #2a2f36;
+        }
+
+        .final-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .final-cta-social-proof {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .final-cta-avatars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .final-cta-avatar {
+            height: auto;
+            width: auto;
+            border: none;
+            margin: 0;
+            position: relative;
+            overflow: visible;
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+        .final-cta-avatar img {
+            width: auto;
+            height: auto;
+            max-height: 40px;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        .final-cta-stats {
+            display: none;
+        }
+
+        .final-cta-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .final-cta-subtitle {
+            font-size: 18px;
+            color: #a0aec0;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .final-cta-benefits {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .final-cta-benefit {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #e0e0e0;
+            font-size: 14px;
+        }
+
+        .final-cta-benefit .icon {
+            color: #4fd1c5;
+            font-size: 16px;
+        }
+
+        .final-cta-button {
+            background: linear-gradient(135deg, #4fd1c5, #38b2ac);
+            color: #1a202c;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 209, 197, 0.3);
+        }
+
+        .final-cta-note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        @media (max-width: 768px) {
+            .final-cta-section {
+                padding: 60px 0;
+            }
+            
+            .final-cta-title {
+                font-size: 26px;
+            }
+            
+            .final-cta-subtitle {
+                font-size: 16px;
+            }
+            
+            .final-cta-social-proof {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .final-cta-avatars {
+                gap: 20px;
+            }
+            
+            .final-cta-avatar img {
+                max-height: 32px;
+            }
+            
+            .final-cta-button {
+                padding: 16px 32px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .final-cta-title {
+                font-size: 22px;
+            }
+            
+            .final-cta-subtitle {
+                font-size: 15px;
+            }
+            
+            .final-cta-avatar {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .final-cta-button {
+                padding: 14px 28px;
+                font-size: 15px;
+                width: 90%;
+                max-width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -893,14 +1062,14 @@
         <div class="info-content-wrapper">
             <div class="info-text">
                 <p>
-                    كما نعلم جميعا، منصة لنكدإن هي أفضل مكان لإيجاد فرص العمل في الجزائر، لكن فقط إذا كان لديك شبكة علاقات كبيرة وقوية وهذا الشيئ يعتبر صعب ويأخذ وقت طويل (أشهر).
+                    كما نعلم جميعا، <span class="highlight-number">منصة لنكدإن هي أفضل مكان لإيجاد فرص العمل في الجزائر</span>، لكن <span class="highlight-number">فقط إذا كان لديك شبكة علاقات كبيرة وقوية</span> وهذا الشيئ يعتبر صعب ويأخذ وقت طويل (أشهر).
                 </p>
                 <p>
-                    قائمتنا الخاصة باللنكدإن بروفايلز تخليك تبني شبكة علاقات إحترافية في غضون دقائق ومع أناس قيّمة (صفحات شركات، أصحاب شركات، مديرين تقنيين...)، الشيئ اللي يخليك تتوصل لفرص عمل كثيرة كل يوم.
+                    قائمتنا الخاصة باللنكدإن بروفايلز <span class="highlight-number">تخليك تبني شبكة علاقات إحترافية</span> في غضون دقائق <span class="highlight-number">ومع أناس قيّمة</span> (صفحات شركات، أصحاب شركات، مديرين تقنيين...)، الشيئ اللي يخليك تتوصل لفرص عمل كثيرة كل يوم.
                 </p>
             </div>
             <div class="info-image">
-                <img src="https://i.imgur.com/Wxs6qdW.jpeg" alt="">
+                <img src="https://i.imgur.com/abrBZTs.png" alt="">
             </div>
         </div>
     </section>
@@ -1028,6 +1197,43 @@
                         <p>لا، عندما تتحصل على ملف الإكسل يبقى عندك مدى الحياة بدون أي إشتراك.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="final-cta-content">
+                <div class="final-cta-social-proof">
+                    <div class="final-cta-avatars">
+                        <div class="final-cta-avatar">
+                            <img src="https://i.imgur.com/rFoVF5G.png" alt="Yassir">
+                        </div>
+                        <div class="final-cta-avatar">
+                            <img src="https://i.imgur.com/e0Qhj7y.png" alt="Ouedkniss">
+                        </div>
+                        <div class="final-cta-avatar">
+                            <img src="https://i.imgur.com/nJfeOYh.png" alt="Chargily">
+                        </div>
+                        <div class="final-cta-avatar">
+                            <img src="https://i.imgur.com/g4YoTLE.png" alt="Ooredoo">
+                        </div>
+                        <div class="final-cta-avatar">
+                            <img src="https://i.imgur.com/1fji4p9.png" alt="Temtem One">
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="final-cta-title">
+                    أحصل على القائمة وكن مطلع على كل فرص عمل للمبرمجين في الجزائر
+                </h2>
+                
+                <p class="final-cta-subtitle">
+                    ماكش رايح تزيد تقول ماكاش الخدمة في دزاير!
+                </p>
+                
+                <a href="#" class="final-cta-button">احصل على القائمة الآن</a>
+                <p class="final-cta-note">القائمة تصلك فورًا إلى بريدك الإلكتروني</p>
             </div>
         </div>
     </section>
