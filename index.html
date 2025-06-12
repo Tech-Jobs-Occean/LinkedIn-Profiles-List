@@ -142,7 +142,7 @@
             font-weight: bold;
             margin-left: 15px; /* RTL: changed from margin-right */
             margin-right: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Updated transition */
             display: inline-block; /* Ensures proper spacing with text */
         }
          .hero-buttons .btn:last-child {
@@ -156,6 +156,8 @@
         }
         .btn-primary:hover {
             opacity: 0.9;
+            transform: translateY(-2px); /* Added transform */
+            box-shadow: 0 8px 25px rgba(79, 209, 197, 0.3); /* Added box-shadow */
         }
 
         .btn-secondary {
